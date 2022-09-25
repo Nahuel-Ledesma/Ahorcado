@@ -15,7 +15,6 @@ function seleccionarPalabra(){
 
 	eleccion = listaPalabras[Math.floor(Math.random() * listaPalabras.length)];
 	palabraElegida = eleccion.toUpperCase();
-	console.log(palabraElegida);
 }
 
 
@@ -23,12 +22,10 @@ function seleccionarPalabra(){
 function comprobarLetra(key,lista){
 	//var estado = false;
 	if(key.charCodeAt() >= 65 || key.charCodeAt() <= 90){
-		console.log(lista.includes(key));
 		if(!lista.includes(key)){
 			lista.push(key);
 			return false;
 		}else{
-			console.log(lista);
 			return true;
 		}
 	}
