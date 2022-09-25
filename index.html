@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,300&display=swap" rel="stylesheet">
+	<title>Challenge 2 - Ahorcado</title>
+</head>
+<body>
+	<header class="header-contenedor">
+		<img src="imagenes/Logo.png">
+	</header>
+
+	<main class="main-contenedor">
+		<!-- Div para el menú principal -->
+		<div class="desaparecer">
+			<h1 class="titulo"> Ahorcado! </h1>
+			<!-- Botones de acción-->
+			<div class="btn-contenedor">
+				<input class="btn" type="submit" value="Iniciar juego" id="iniciar-juego" onclick="iniciarJuego()">
+				<input class="btn" type="submit" value="Agregar palabra" onclick="agregarPalabra();">
+			</div>
+		</div>
+
+
+		<!-- Div para el juego -->
+		<div class="aparece-ahorcado">
+			<canvas id="trazo" width="900" height="600"></canvas>
+			<div class="lineas"></div>
+
+			<div class="juego-acciones-contenedor">
+				<input class="btn" type="submit" value="Iniciar juego nuevo" onclick="iniciarJuego()">
+				<input class="btn" type="submit" value="Desistir" onclick="volverMenu()">	
+			</div>
+		</div>
+
+
+		<!-- Div para el menú de agregar palabra nueva -->
+		<div class="aparece-agregar-palabra">
+			<div class="palabra-contenedor">
+				<label for="palabra-nueva"> Ingrese una palabra: </label>
+				<input type="text" id="palabra-nueva" placeholder="Ingrese su palabra aquí" onfocus="vaciar()">
+			</div>
+
+			<p>&#9888 Máx. de 12 letras</p>
+
+			<div class="acciones-contenedor">
+				<div class="alerta"></div>
+				<input class="btn" type="submit" value="Guardar palabra" onclick="guardarPalabra()">
+				<input class="btn" type="submit" value="Iniciar juego" onclick="iniciarJuego()">
+				<input class="btn" type="submit" value="Cancelar" onclick="volverMenu()">	
+			</div>
+		</div>
+	</main>
+
+	<footer>
+		<div class="footer-contenedor">
+			<p class="nombre">Challenge realizado por Nahuel Joaquín Ledesma</p>
+		</div>
+	</footer>
+
+	<!-- JavaScript -->
+	<script type="text/javascript" src="js/codigo.js"></script>
+	<script type="text/javascript" src="js/canvas.js"></script>
+	<script type="text/javascript" src="js/nuevaPalabra.js"></script>
+</body>
+</html>

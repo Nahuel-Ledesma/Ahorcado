@@ -1,0 +1,200 @@
+body{
+	background: #F3F5FC;
+	font-family: 'Open Sans', sans-serif;
+}
+
+
+
+/********** Estilos para la página principal **********/
+.header-contenedor{
+	width: 100%;
+	margin: 0 auto;
+	margin-bottom: 20px;
+}
+
+header img{
+	padding-top: 40px;
+	padding-left: 40px;
+}
+
+
+.main-contenedor{
+	width: 940px;
+	height: 800px;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+	border: 1px solid #333;
+	border-radius: 35px;
+	box-shadow: -5px 5px;
+	margin-bottom: 30px;
+}
+
+.desaparecer{
+	text-align: center;
+}
+
+
+.btn-contenedor{
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+
+.titulo{
+	font-size: 38px;
+	padding-top: 40px;
+	text-decoration: underline;
+}
+
+
+.btn{
+	font-family: 'Open Sans', sans-serif;
+	font-size: 24px;
+	margin: 50px;
+	text-align: center;
+	width: 317px;
+	height: 114px;
+	border: 1px solid #0A3871;
+	background-color: #0A3871;
+	color: #FFF;
+	border-radius: 20px;
+	transition: 0.2s;
+}
+
+.btn:hover{
+	transform: scale(1.1);
+	cursor: pointer;
+	background-color: #1F59A1;
+}
+
+
+.footer-contenedor{
+	width: 100%;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.aparece-ahorcado{
+	display: none;
+	margin-top: 90px;
+}
+
+
+/********** Estilos para la página para agregar una palabra **********/
+.aparece-agregar-palabra{
+	display: none;
+}
+
+.palabra-contenedor{
+	width: 50%;
+	margin: 30px auto;
+}
+
+.palabra-contenedor label{
+	display: block;
+	font-size: 30px;
+}
+
+.palabra-contenedor input{
+	margin-top: 20px;
+	width: 100%;
+	height: 300px;
+	text-align: center;
+	font-size: 24px;
+	border-radius: 15px;
+}
+
+.aparece-agregar-palabra p{
+	margin-top: 15px;
+}
+
+.acciones-contenedor{
+	width: 136%;
+	transform: scale(0.6);
+}
+
+.verde {
+    font-size: 16px;
+    border-radius: 20px;
+    padding: 2vh 5vh;
+    background-color: #080;
+    color: #FFF;
+    margin-bottom: 1vh;
+    opacity: 1;
+    transition: 0.5s ease all;
+}
+
+.rojo {
+    font-size: 16px;
+    border-radius: 20px;
+    padding: 2vh 5vh;
+    background-color: #B00;
+    color: #FFF;
+    margin-bottom: 1vh;
+    opacity: 1;
+    transition: 0.5s ease all;
+}
+
+
+
+/********** Estilos para el contenedor de las acciones del juego ********/
+.juego-acciones-contenedor{
+	transform: scale(0.7);
+	margin-top: -20px;
+	margin-left: 30px;
+}
+
+
+/********** Estilos responsive **********/
+@media screen and (max-width: 480px){
+	header img{
+		padding-left: 0px;
+	}
+
+	.main-contenedor{
+		width: 90%;
+		height: 650px;
+	}
+
+	.titulo{
+		padding-top: 0px;
+	}
+
+	.btn{
+		margin: 50px auto 0;
+		width: 100%;
+		font-size: 20px;
+	}
+
+	.palabra-contenedor{
+		margin: 70px auto 0 20%;
+	}
+
+
+	.palabra-contenedor label{
+		font-size: 16px;
+		padding-left: 30px;
+	}
+
+	.palabra-contenedor input{
+		height: 50px;
+		width: 215px;
+		font-size: 18px;
+	}
+
+	canvas{
+		width: 300px;
+		height: 400px;
+	}
+
+	.juego-acciones-contenedor {
+    	transform: scale(0.6);
+    	margin-top: -80px;
+    	margin-left: 10px;
+	}
+}
